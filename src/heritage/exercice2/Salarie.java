@@ -1,4 +1,4 @@
-package heritage;
+package heritage.exercice2;
 
 public class Salarie extends Individu {
     private int salaire;
