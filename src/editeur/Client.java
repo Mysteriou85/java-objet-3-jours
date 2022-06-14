@@ -1,11 +1,11 @@
 package editeur;
 
 public class Client {
-    String nom;
-    String prenom;
-    String adress;
-    int cp;
-    String ville;
+    private String nom;
+    private String prenom;
+    private String adress;
+    private int cp;
+    private String ville;
 
     // Constructor
     public Client(String nom, String prenom, String adress, int cp, String ville) {

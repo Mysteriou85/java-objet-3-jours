@@ -1,12 +1,12 @@
 package editeur;
 
 public class Livre {
-    String titre;
-    String auteur;
-    double prix;
-    int nbpages;
-    long isbn;
-    String annee;
+    private String titre;
+    private String auteur;
+    private double prix;
+    private int nbpages;
+    private long isbn;
+    private String annee;
 
     // Constructor
     public Livre() {
