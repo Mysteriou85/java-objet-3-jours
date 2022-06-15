@@ -1,20 +1,25 @@
 package heritage.partie4.exercice2;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Projet {
 
     private String nom;
-    private Date debut;
-    private Date fin;
+    private LocalDate debut;
+    private LocalDate fin;
     private int prixFactureMO;
+    private List<Mission> lesMissions = new ArrayList<>();
 
     // Constructor
-    public Projet(String nom, Date debut, Date fin, int prixFactureMO) {
+    public Projet(String nom, LocalDate debut, LocalDate fin, int prixFactureMO, List lesMissions) {
         this.setNom(nom);
         this.setDebut(debut);
         this.setFin(fin);
         this.setPrixFactureMO(prixFactureMO);
+        this.lesMissions = lesMissions;
     }
 
     // Getter
@@ -22,11 +27,11 @@ public class Projet {
         return nom;
     }
 
-    public Date getDebut() {
+    public LocalDate getDebut() {
         return debut;
     }
 
-    public Date getFin() {
+    public LocalDate getFin() {
         return fin;
     }
 
@@ -39,11 +44,11 @@ public class Projet {
         this.nom = nom;
     }
 
-    public void setDebut(Date debut) {
+    public void setDebut(LocalDate debut) {
         this.debut = debut;
     }
 
-    public void setFin(Date fin) {
+    public void setFin(LocalDate fin) {
         this.fin = fin;
     }
 
@@ -52,7 +57,16 @@ public class Projet {
     }
 
     // Methode
-    private void cumulCoutMP() {}
+    private double cumulCoutMP() {
+        Intervenant intervenant = new Intervenant("test", 11);
+        double cout = 0;
+        for (Mission lesMissions : lesMissions) {
+            cout += intervenant.getTauxHoraire() * lesMissions.nbHeuresEffectuees();
+        }
+        return cout;
+    }
 
-    public void margeBruteCourante() {}
+    public double margeBruteCourante() {
+        return  prixFactureMO - this.cumulCoutMP();
+    }
 }

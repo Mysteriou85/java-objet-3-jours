@@ -2,10 +2,10 @@ package heritage.partie4.exercice2;
 
 public class Intervenant {
     private String nom;
-    private int tauxHoraire;
+    private double tauxHoraire;
 
     // Constructor
-    public Intervenant(String nom, int tauxHoraire) {
+    public Intervenant(String nom, double tauxHoraire) {
         this.setNom(nom);
         this.setTauxHoraire(tauxHoraire);
     }
@@ -15,7 +15,7 @@ public class Intervenant {
         return nom;
     }
 
-    public int getTauxHoraire() {
+    public double getTauxHoraire() {
         return tauxHoraire;
     }
 
@@ -24,7 +24,7 @@ public class Intervenant {
         this.nom = nom;
     }
 
-    public void setTauxHoraire(int tauxHoraire) {
+    public void setTauxHoraire(double tauxHoraire) {
         this.tauxHoraire = tauxHoraire;
     }
 }
