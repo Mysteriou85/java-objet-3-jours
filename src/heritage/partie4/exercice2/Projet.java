@@ -11,10 +11,10 @@ public class Projet {
 
     // Constructor
     public Projet(String nom, Date debut, Date fin, int prixFactureMO) {
-        this.nom = nom;
-        this.debut = debut;
-        this.fin = fin;
-        this.prixFactureMO = prixFactureMO;
+        this.setNom(nom);
+        this.setDebut(debut);
+        this.setFin(fin);
+        this.setPrixFactureMO(prixFactureMO);
     }
 
     // Getter
@@ -50,4 +50,9 @@ public class Projet {
     public void setPrixFactureMO(int prixFactureMO) {
         this.prixFactureMO = prixFactureMO;
     }
+
+    // Methode
+    private void cumulCoutMP() {}
+
+    public void margeBruteCourante() {}
 }
