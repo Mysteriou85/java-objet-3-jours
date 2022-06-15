@@ -1,4 +1,6 @@
-package heritage.mesMachines;
+package heritage.mesMachines.typeDeMachine;
+
+import heritage.mesMachines.Machine;
 
 import java.time.LocalDate;
 
