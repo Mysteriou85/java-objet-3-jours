@@ -58,10 +58,9 @@ public class Projet {
 
     // Methode
     private double cumulCoutMP() {
-        Intervenant intervenant = new Intervenant("test", 11);
         double cout = 0;
         for (Mission lesMissions : lesMissions) {
-            cout += intervenant.getTauxHoraire() * lesMissions.nbHeuresEffectuees();
+            cout += (lesMissions.getExecutant().getTauxHoraire() * lesMissions.nbHeuresEffectuees());
         }
         return cout;
     }
