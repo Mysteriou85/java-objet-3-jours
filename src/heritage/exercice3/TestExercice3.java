@@ -3,13 +3,18 @@ package heritage.exercice3;
 public class TestExercice3 {
     public static void main(String[] args) {
 
-        Formateur formateur = new Formateur(
+        Formateur formateur1 = new Formateur(
                 "Bob",
                 "bobi",
                 "06",
-                01,
-                "26/05/1999",
-                10
+                "26/05/1999"
+        );
+
+        Formateur formateur2 = new Formateur(
+                "Bob",
+                "ross",
+                "07",
+                "26/05/1999"
         );
 
         Stagiaire stagiaire = new Stagiaire(
@@ -23,7 +28,8 @@ public class TestExercice3 {
         );
 
         System.out.println(stagiaire.toString());
-        System.out.println(formateur.toString());
+        System.out.println(formateur1.toString());
+        System.out.println(formateur2.toString());
 
     }
 }

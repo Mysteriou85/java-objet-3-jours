@@ -3,14 +3,14 @@ package heritage.exercice3;
 public class Formateur extends Personne {
     private int numeroIntervenant;
     private String dateDeCreation;
-    private int nombreIntervenant;
+    private static int nombreIntervenant;
 
     // Constructor
-    public Formateur(String nom, String prenom, String telephone, int numeroIntervenant, String dateDeCreation, int nombreIntervenant) {
+    public Formateur(String nom, String prenom, String telephone, String dateDeCreation) {
         super(nom, prenom, telephone);
-        this.numeroIntervenant = numeroIntervenant;
-        this.dateDeCreation = dateDeCreation;
-        this.nombreIntervenant = nombreIntervenant;
+        this.setNombreIntervenant();
+        this.numeroIntervenant = nombreIntervenant;
+        this.setDateDeCreation(dateDeCreation);
     }
 
     // Getter
@@ -28,15 +28,15 @@ public class Formateur extends Personne {
 
     // Setter
     public void setNumeroIntervenant(int numeroIntervenant) {
-        this.numeroIntervenant = numeroIntervenant;
+        this.numeroIntervenant++;
     }
 
     public void setDateDeCreation(String dateDeCreation) {
         this.dateDeCreation = dateDeCreation;
     }
 
-    public void setNombreIntervenant(int nombreIntervenant) {
-        this.nombreIntervenant = nombreIntervenant;
+    public void setNombreIntervenant() {
+        this.nombreIntervenant++;
     }
 
     @Override
